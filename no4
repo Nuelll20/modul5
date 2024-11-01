@@ -1,0 +1,51 @@
+import java.util.Scanner;
+
+public class switchCaseno4 {
+    public static void main(String[] args) {
+        Scanner scn = new Scanner (System.in);
+        double s, m, l, xl, xxl;
+        int jmlbrang;
+        System.out.println("1 = s");
+        System.out.println("2 = m");
+        System.out.println("3 = l");
+        System.out.println("4 = xl");
+        System.out.println("5 = xxl");
+        int pilihanbaju;
+        System.out.print("Pilih ukuran baju : ");
+        pilihanbaju = scn.nextInt();
+        
+        System.out.print("Berapa baju yang Anda beli : ");
+        jmlbrang = scn.nextInt();
+        
+        double totalharga = 0;
+        switch (pilihanbaju) {
+            case 1 :
+            s = 30000;
+            totalharga = jmlbrang * s;
+            break;
+
+            case 2 :
+            m = 38000;
+            totalharga = jmlbrang * m;
+            break;
+
+            case 3 :
+            l = 45000;
+            totalharga = jmlbrang * l;
+            break;
+
+            case 4 :
+            xl = 50000;
+            totalharga = jmlbrang * xl;
+            break;
+
+            case 5 :
+            xxl = 60000;
+            totalharga = jmlbrang * xxl;
+            break;
+
+            default: System.out.println("Tidak mempunyai stok pada ukuran tersebut");
+        }
+        System.out.println("Harga yang harus dibayar adalah : "+totalharga);
+    }   
+}
