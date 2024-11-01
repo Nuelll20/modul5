@@ -1,0 +1,56 @@
+import java.util.Scanner;
+
+public class switchCaseno5 {
+    public static void main(String[] args) {
+        Scanner scn = new Scanner (System.in);
+        System.out.print("Masukkan gaji pokok = ");
+        double pokokgaji = scn.nextDouble();
+        System.out.print("Masukkan golongan (1, 2, 3, 4) = ");
+        int golongan = scn.nextInt();
+        System.out.print("Masukkan masa kerja = ");
+        double masakerja = scn.nextDouble();
+        double persentasebonus = 0;
+        
+        switch (golongan) {
+            case 1:
+            if (masakerja <= 10) {
+                persentasebonus = 0.50;
+            }else if (masakerja <=20) {
+                persentasebonus = 0.60;
+            }else {
+                persentasebonus = 0.70;
+            }
+            break;
+            case 2:
+            if (masakerja <= 10) {
+                persentasebonus = 0.60;
+            }else if (masakerja <=20) {
+                persentasebonus = 0.70;
+            }else {
+                persentasebonus = 0.80;
+            }
+            break;
+            case 3:
+            if (masakerja <= 10) {
+                persentasebonus = 0.70;
+            }else if (masakerja <= 20) {
+                persentasebonus = 0.80;
+            }else {
+                persentasebonus = 0.90;
+            }
+            break;
+            case 4:
+            if (masakerja <= 10) {
+                persentasebonus = 0.80;
+            }else if (masakerja <= 20) {
+                persentasebonus = 0.90;
+            }else {
+                persentasebonus = 1.00;
+            }
+            break;
+            default: System.out.println("Golongan tidak tersedia");
+        }
+        double bonusakhir = pokokgaji * persentasebonus;
+        System.out.println("Bonus akhir tahun adalah = "+bonusakhir);
+    }
+}
