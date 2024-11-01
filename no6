@@ -1,0 +1,55 @@
+import java.util.Scanner;
+
+public class switchCaseno6 {
+
+    enum Agama {HINDU, BUDHA, YAHUDI, KATOLIK, KRISTEN, ISLAM}
+    public static void main(String[] args) {
+        Scanner scn = new Scanner (System.in);
+
+        System.out.print("Masukkan keimanan atau Agama anda : ");
+        String agama = scn.nextLine().toUpperCase();
+
+        String kitabsuci = "";
+        String nabi = "";
+
+        try {
+            Agama AGAMA = Agama.valueOf(agama);
+
+            switch (AGAMA) {
+                case HINDU:
+                kitabsuci = "Veda";
+                nabi = "-";
+                break;
+
+                case BUDHA:
+                kitabsuci = "Tripitaka";
+                nabi = "Sidarta Gautama";
+
+                case YAHUDI:
+                kitabsuci = "Taurat";
+                nabi = "Musa";
+
+                case KATOLIK:
+                kitabsuci = "Injil";
+                nabi = "Yesus";
+                break;
+
+                case KRISTEN:
+                kitabsuci = "Injil";
+                nabi = "Yesus";
+
+                case ISLAM:
+                kitabsuci = "Alquran";
+                nabi = "Muhammad";
+            }
+        } catch (IllegalArgumentException e) {
+            System.out.println("Agama tidak sah");
+            return;
+        }
+        System.out.println("Kitab Suci: "+kitabsuci+ " dan Nabi: "+nabi);
+
+       
+
+    }
+    
+}
