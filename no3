@@ -1,0 +1,34 @@
+import java.util.Scanner;
+public class switchCaseno3 {
+    public static void main(String[] args) {
+        Scanner scn = new Scanner (System.in);
+        System.out.print("Masukkan bulan : ");
+        int bulan = scn.nextInt();
+
+        int tanggal;
+
+        switch (bulan) {
+            case 3:
+            case 4:
+            case 6:
+            case 8:
+            case 11: 
+            tanggal = 30;
+            break;
+
+            case 1:
+            case 5:
+            case 7:
+            case 10:
+            case 12:
+            tanggal = 31;
+            break;
+            default: tanggal = 28;
+            break;
+        }
+        
+        System.out.println("Tanggal dari bulan tersebut adalah : "+tanggal);
+        
+    }
+    
+}
